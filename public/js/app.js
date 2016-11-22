@@ -6,7 +6,9 @@ socket.on('connect', function() {
 
 socket.on('message', function(message) {
   console.log("New Message: " + message.text);
-  document.getElementById('smname').value = message.text;
+  var newmessage = document.createElement("div");
+  newmessage.appendChild(document.createTextNode(message.text));
+  document.getElementById('smname').appendChild(newmessage);
 })
 
 function deploy() {
