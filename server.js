@@ -12,7 +12,7 @@ io.on('connection', function (socket) {
 		io.sockets.emit("message", message)
 	});
 	socket.emit("message", {
-		text: "Welcome to the chat app!"
+		text: "Type a messsage in the field above!"
 	});
 });
 http.listen(PORT, function () {
