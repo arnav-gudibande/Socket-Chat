@@ -13,5 +13,10 @@ socket.on('message', function(message) {
 
 function deploy() {
   var chatMessage = document.getElementById('value').value;
-  socket.emit("message", { text: chatMessage });
+  if (chatMessage != null && chatMessage.trim() != '')
+    socket.emit("message", { text: chatMessage });
+}
+
+function textbox(e) {
+    if (e.keyCode == 13) document.getElementById('submit').click();
 }
