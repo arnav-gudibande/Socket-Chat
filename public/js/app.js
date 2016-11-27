@@ -15,6 +15,7 @@ function deploy() {
   var chatMessage = document.getElementById('value').value;
   if (chatMessage != null && chatMessage.trim() != '')
     socket.emit("message", { text: chatMessage });
+  document.getElementById("value").value = "";
 }
 
 function textbox(e) {
