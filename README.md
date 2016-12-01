@@ -1,3 +1,3 @@
 # Socket-Chat
 
-Basic chat with express and socket.io
+Web chat with express, socket.io and Node.js
